@@ -36,13 +36,13 @@ List insert_head(List li, int x)
 
     // on trouve la queue pour mettre à jour son next
     ListElement *queue = li;
-    while (queue->next != li)
+    while (queue->next != li) /** la boucle s'arrete lorsque queue pointe sur le priemeir element de la liste */
     {
         queue = queue->next;
     }
 
-    element->next = li;
-    queue->next = element;
+    element->next = li; // l'element à ajouter va pointer sur le premier element de la liste
+    queue->next = element; // le dernier element de la liste va pointer sur l'element à ajouter ! de cette maniere, le nouvelle element devient la tete de la liste
 
     return element;
 }

@@ -7,7 +7,7 @@ typedef enum{
 }Bool;
 
 //structure d'un element de la liste
-typedef struct ListElement
+typedef struct ListElement 
 {
     int value;
     struct ListElement *next;
